@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculettor</title>
+  </head>
+  <style>
+    .Main {
+      background-color: rgb(211, 209, 209);
+      width: 230px;
+      height: 350px;
+      text-align: center;
+      padding: 5px;
+      border-radius: 10px;
+      margin-top: 100px;
+      margin-left: 100px;
+      box-shadow: 0px 10px 20px -3px rgba(0, 0, 0, 0.1);
+    }
+
+    .TypeSection input {
+      margin-top: 20px;
+      padding: 10px;
+      font-weight: 600;
+      border: 2px solid black;
+      text-align: end;
+    }
+    .BTN1 input {
+      padding: 15px;
+      margin: 5px;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      font-weight: 600;
+      background-color: rgb(167, 62, 243);
+      border: 2px solid rgb(167, 62, 243);
+      border-radius: 8px;
+      color: white;
+      cursor: pointer;
+    }
+    .BTN2 input {
+      padding: 15px;
+      margin: 5px;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      font-weight: 600;
+      background-color: rgb(167, 62, 243);
+      border: 2px solid rgb(167, 62, 243);
+      border-radius: 8px;
+      color: white;
+      cursor: pointer;
+    }
+    .BTN3 input {
+      padding: 15px;
+      margin: 5px;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      font-weight: 600;
+      background-color: rgb(167, 62, 243);
+
+      border-radius: 8px;
+      color: white;
+      cursor: pointer;
+      border: 2px solid rgb(167, 62, 243);
+    }
+    .BTN1 input:hover {
+      padding: 15px;
+      margin: 5px;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      font-weight: 600;
+      background-color: rgb(255, 255, 255);
+      border: 2px solid black;
+      border-radius: 8px;
+      color: rgb(0, 0, 0);
+      cursor: pointer;
+    }
+    .BTN2 input:hover {
+      padding: 15px;
+      margin: 5px;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      font-weight: 600;
+      background-color: rgb(255, 255, 255);
+      border: 2px solid black;
+      border-radius: 8px;
+      color: rgb(0, 0, 0);
+      cursor: pointer;
+    }
+    .BTN3 input:hover {
+      padding: 15px;
+      margin: 5px;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      font-weight: 600;
+      background-color: rgb(255, 255, 255);
+      border: 2px solid black;
+      border-radius: 8px;
+      color: rgb(0, 0, 0);
+      cursor: pointer;
+    }
+
+    .ClearBtn input {
+      padding: 10px;
+      margin: 5px;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      font-weight: 600;
+      background-color: rgb(94, 161, 237);
+      border: 2px solid rgb(94, 161, 237);
+
+      border-radius: 8px;
+      color: rgb(255, 255, 255);
+      cursor: pointer;
+      width: 190px;
+    }
+    .ClearBtn input:hover {
+      padding: 10px;
+      margin: 5px;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      font-weight: 600;
+      background-color: rgb(255, 255, 255);
+      border: 2px solid black;
+      border-radius: 8px;
+      color: rgb(0, 0, 0);
+      cursor: pointer;
+      width: 190px;
+    }
+  </style>
+  <body>
+    <div>
+      <div class="Main">
+        <div>
+          <div class="TypeSection">
+            <input type="text" placeholder="0" value="0" id="result" />
+          </div>
+        </div>
+        <div style="margin-top: 10px">
+          <!--  -->
+          <div class="BTN1">
+            <input type="button" value="7" onclick="add(7)" />
+            <input type="button" value="8" onclick="add(8)" />
+            <input type="button" value="9" onclick="add(9)" />
+            <input type="button" value="+" onclick="add('+')" />
+          </div>
+          <div class="BTN2">
+            <input type="button" value="4" onclick="add(4)" />
+            <input type="button" value="5" onclick="add(5)" />
+            <input type="button" value="6" onclick="add(6)" />
+            <input type="button" value="-" onclick="add('-')" />
+          </div>
+          <div class="BTN3">
+            <input type="button" value="1" onclick="add(1)" />
+            <input type="button" value="2" onclick="add(2)" />
+            <input type="button" value="3" onclick="add(3)" />
+            <input type="button" value="*" onclick="add('*')" />
+          </div>
+          <div class="BTN3">
+            <input type="button" value="0" onclick="add(0)" />
+            <input type="button" value="%" onclick="add('%')" />
+            <input type="button" value="/" onclick="add('/')" />
+            <input type="button" value="=" onclick="result()" />
+          </div>
+          <div class="ClearBtn">
+            <input type="button" value="Clear" onclick="Allclear()" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    function add(val) {
+      document.getElementById("result").value += val;
+      // alert("You have call me ..!");
+    }
+
+    function result() {
+      res = document.getElementById("result").value;
+      document.getElementById("result").value = eval(res);
+    }
+
+    function Allclear() {
+      document.getElementById("result").value = "";
+    }
+  </script>
+</html>
