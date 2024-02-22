@@ -3,184 +3,135 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculettor</title>
+    <title>Calculator</title>
+    <!-- Calculator Font family link -->
+    <link
+      href="https://db.onlinewebfonts.com/c/ce4b0ee545ec52c2ec8cec62d23ffb09?family=Calculator"
+      rel="stylesheet"
+    />
   </head>
   <style>
-    .Main {
-      background-color: rgb(211, 209, 209);
-      width: 230px;
-      height: 350px;
-      text-align: center;
-      padding: 5px;
-      border-radius: 10px;
+    .MainClass {
+      background-color: #2196f3;
+      width: 350px;
+      height: 520px;
       margin-top: 100px;
-      margin-left: 100px;
-      box-shadow: 0px 10px 20px -3px rgba(0, 0, 0, 0.1);
-    }
+      border-radius: 20px;
+      margin-left: 550px;
 
-    .TypeSection input {
-      margin-top: 20px;
-      padding: 10px;
-      font-weight: 600;
-      border: 2px solid black;
+      /* margin-left: 10px; */
+    }
+    .Small {
+      text-align: center;
+    }
+    .Small input {
+      background-color: #e4f2fd;
+      border: none;
+      padding: 0;
+      margin-top: 15px;
+      width: 310px;
+      height: 70px;
+      border-radius: 10px;
+      font-size: 70px;
+      font-family: "Calculator";
+      font-weight: 700px;
       text-align: end;
     }
-    .BTN1 input {
-      padding: 15px;
-      margin: 5px;
-      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-        sans-serif;
-      font-weight: 600;
-      background-color: rgb(167, 62, 243);
-      border: 2px solid rgb(167, 62, 243);
-      border-radius: 8px;
-      color: white;
-      cursor: pointer;
+    .ButtonsBox1 {
+      /* text-align: center; */
+      margin-left: 25px;
+      margin-top: 20px;
+      width: 300px;
+      display: flex;
+      justify-content: space-around;
     }
-    .BTN2 input {
-      padding: 15px;
-      margin: 5px;
-      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-        sans-serif;
-      font-weight: 600;
-      background-color: rgb(167, 62, 243);
-      border: 2px solid rgb(167, 62, 243);
-      border-radius: 8px;
-      color: white;
+    .ButtonsBox1 button {
+      background-color: #1564c0;
+      padding: 25px;
+      color: #e4f2fd;
+      font-size: 30px;
+      border: none;
+      border-radius: 10px;
       cursor: pointer;
+      font-family: sans-serif;
+      font-weight: 700;
     }
-    .BTN3 input {
-      padding: 15px;
-      margin: 5px;
-      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-        sans-serif;
-      font-weight: 600;
-      background-color: rgb(167, 62, 243);
-
-      border-radius: 8px;
-      color: white;
+    .ButtonsBox1 button:hover {
+      background-color: #062f8d;
+      padding: 25px;
+      color: #e4f2fd;
+      font-size: 30px;
+      /* border: none; */
+      border-radius: 10px;
       cursor: pointer;
-      border: 2px solid rgb(167, 62, 243);
-    }
-    .BTN1 input:hover {
-      padding: 15px;
-      margin: 5px;
-      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-        sans-serif;
-      font-weight: 600;
-      background-color: rgb(255, 255, 255);
-      border: 2px solid black;
-      border-radius: 8px;
-      color: rgb(0, 0, 0);
-      cursor: pointer;
-    }
-    .BTN2 input:hover {
-      padding: 15px;
-      margin: 5px;
-      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-        sans-serif;
-      font-weight: 600;
-      background-color: rgb(255, 255, 255);
-      border: 2px solid black;
-      border-radius: 8px;
-      color: rgb(0, 0, 0);
-      cursor: pointer;
-    }
-    .BTN3 input:hover {
-      padding: 15px;
-      margin: 5px;
-      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-        sans-serif;
-      font-weight: 600;
-      background-color: rgb(255, 255, 255);
-      border: 2px solid black;
-      border-radius: 8px;
-      color: rgb(0, 0, 0);
-      cursor: pointer;
-    }
-
-    .ClearBtn input {
-      padding: 10px;
-      margin: 5px;
-      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-        sans-serif;
-      font-weight: 600;
-      background-color: rgb(94, 161, 237);
-      border: 2px solid rgb(94, 161, 237);
-
-      border-radius: 8px;
-      color: rgb(255, 255, 255);
-      cursor: pointer;
-      width: 190px;
-    }
-    .ClearBtn input:hover {
-      padding: 10px;
-      margin: 5px;
-      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-        sans-serif;
-      font-weight: 600;
-      background-color: rgb(255, 255, 255);
-      border: 2px solid black;
-      border-radius: 8px;
-      color: rgb(0, 0, 0);
-      cursor: pointer;
-      width: 190px;
+      font-family: sans-serif;
+      font-weight: 700;
     }
   </style>
   <body>
-    <div>
-      <div class="Main">
+    <div class="MainClass">
+      <div class="Small">
         <div>
-          <div class="TypeSection">
-            <input type="text" placeholder="0" value="0" id="result" />
-          </div>
+          <input type="text" id="result" />
         </div>
-        <div style="margin-top: 10px">
-          <!--  -->
-          <div class="BTN1">
-            <input type="button" value="7" onclick="add(7)" />
-            <input type="button" value="8" onclick="add(8)" />
-            <input type="button" value="9" onclick="add(9)" />
-            <input type="button" value="+" onclick="add('+')" />
+      </div>
+      <div>
+        <div class="ButtonsBox1">
+          <div>
+            <button
+              style="background-color: rgb(252, 85, 85)"
+              onclick="ClearAC()"
+            >
+              AC
+            </button>
           </div>
-          <div class="BTN2">
-            <input type="button" value="4" onclick="add(4)" />
-            <input type="button" value="5" onclick="add(5)" />
-            <input type="button" value="6" onclick="add(6)" />
-            <input type="button" value="-" onclick="add('-')" />
-          </div>
-          <div class="BTN3">
-            <input type="button" value="1" onclick="add(1)" />
-            <input type="button" value="2" onclick="add(2)" />
-            <input type="button" value="3" onclick="add(3)" />
-            <input type="button" value="*" onclick="add('*')" />
-          </div>
-          <div class="BTN3">
-            <input type="button" value="0" onclick="add(0)" />
-            <input type="button" value="%" onclick="add('%')" />
-            <input type="button" value="/" onclick="add('/')" />
-            <input type="button" value="=" onclick="result()" />
-          </div>
-          <div class="ClearBtn">
-            <input type="button" value="Clear" onclick="Allclear()" />
+          <div><button onclick="AddValue(0)">0</button></div>
+
+          <div><button onclick="AddValue('/')">/</button></div>
+          <div><button onclick="AddValue('*')">*</button></div>
+        </div>
+
+        <div class="ButtonsBox1">
+          <div><button onclick="AddValue(7)">7</button></div>
+          <div><button onclick="AddValue(8)">8</button></div>
+          <div><button onclick="AddValue(9)">9</button></div>
+          <div><button onclick="AddValue('+')">+</button></div>
+        </div>
+        <div class="ButtonsBox1">
+          <div><button onclick="AddValue(4)">4</button></div>
+          <div><button onclick="AddValue(5)">5</button></div>
+          <div><button onclick="AddValue(6)">6</button></div>
+          <div><button onclick="AddValue('-')">-</button></div>
+        </div>
+        <div class="ButtonsBox1">
+          <div><button onclick="AddValue(1)">1</button></div>
+          <div><button onclick="AddValue(2)">2</button></div>
+          <div><button onclick="AddValue(3)">3</button></div>
+          <div>
+            <button
+              style="background-color: rgb(7, 244, 98)"
+              onclick="Result()"
+            >
+              =
+            </button>
           </div>
         </div>
       </div>
     </div>
   </body>
   <script>
-    function add(val) {
-      document.getElementById("result").value += val;
-      // alert("Function Call ..!");
+    function AddValue(a) {
+      document.getElementById("result").value += a;
     }
-
-    function result() {
+    function Result() {
+      // we have give new vareble to hear
       res = document.getElementById("result").value;
+      // we have gives eval  keyworld in the line
       document.getElementById("result").value = eval(res);
     }
 
-    function Allclear() {
-      document.getElementById("result").value = "";
+    function ClearAC() {
+      document.getElementById("result").value = " ";
     }
   </script>
 </html>
