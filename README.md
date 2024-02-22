@@ -2,7 +2,7 @@
 To create a basic calculator using CSS, HTML, and JavaScrip
 
 
-![logo](https://github.com/sudhanshu1313/Calculator/blob/main/calculator.png)
+![calculator](https://github.com/sudhanshu1313/Calculator/blob/main/calculator.png)
 
-
+<h4>Live Demo <a href="https://sudhanshu1313.github.io/Calculator/">Calculator</a> </h4>
 
