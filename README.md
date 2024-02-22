@@ -2,4 +2,4 @@
 To create a basic calculator using CSS, HTML, and JavaScrip
 
 
-![logo]("Calulator.png")
+![logo]("calculator.png")
